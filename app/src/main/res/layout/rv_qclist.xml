@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvQCname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Audio Jack"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp"
+        android:textAlignment="center"/>
+
+    <View
+        android:layout_width="0.7dp"
+        android:layout_height="match_parent"
+        android:background="@color/grey"/>
+
+    <TextView
+        android:id="@+id/tvQCstatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_weight="1"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="14sp"
+        android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/grey"/>
+
+</LinearLayout>

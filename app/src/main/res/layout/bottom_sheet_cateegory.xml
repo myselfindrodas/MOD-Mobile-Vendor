@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/white_upper_round_box"
+    android:paddingBottom="30dp">
+
+   <View
+       android:id="@+id/dash1"
+       android:layout_width="40dp"
+       android:layout_height="3dp"
+       android:background="@color/grey1"
+       android:layout_gravity="center"
+       android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvCategoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silver Category"
+        android:textSize="13sp"
+        android:fontFamily="@font/rubik_regular"
+        android:textColor="@color/black1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dash1"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"/>
+
+    <View
+        android:id="@+id/dash2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey1"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategoryName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:id="@+id/llsubcat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/ivDot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/blue_round"
+            android:layout_marginStart="30dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/tvInfoCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum is simply dummy text of the"
+            android:textColor="@color/black1"
+            android:textSize="13sp"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/categoryListItems"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/dash2"-->
+<!--        android:layout_marginTop="10dp"/>-->
+</LinearLayout>

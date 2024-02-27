@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.InvoiceFragment">
+
+        <include
+            android:id="@+id/topBarInvoice"
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/topBarInvoice"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:id="@+id/llInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/upper_round_white_box"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order ID"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/rubik_regular"/>
+
+                        <TextView
+                            android:id="@+id/tvOrderIdInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="#MOB653638"
+                            android:textSize="14sp"
+                            android:textColor="@color/black1"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/tvOrderStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivered"
+                            android:textSize="8sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/rubik_regular"
+                            android:background="@drawable/green_box_radious_20"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:layout_gravity="end"
+                            android:layout_margin="10dp"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Deliver To"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:id="@+id/tvDeliveryAddressInInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12 Abc Road, Bank Park New Town, Kolkata, West Bengal 700091"
+                        android:textSize="14sp"
+                        android:textColor="@color/black1"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDeliveryByInInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llInvoice"
+                    android:background="@color/blue3"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="40dp"
+                        android:background="@color/green"/>
+
+                    <TextView
+                        android:id="@+id/tvDeliveryByInInvoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery by 5th Sept 2023"
+                        android:textColor="@color/green"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/icon_truck"
+                        android:drawablePadding="10dp"
+                        android:layout_marginStart="13dp"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llReturnOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/white_box"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlDeliveryByInInvoice">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivMobileImageInInvoice"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/phone_image"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toRightOf="@+id/ivMobileImageInInvoice"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvMobileNameInInvoice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Apple I Phone 13 Pro"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/rubik_regular"
+                                android:layout_marginStart="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="10dp">
+
+                                <View
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:background="@drawable/mini_grey_box"/>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="13dp"
+                                    android:background="@color/deep_grey1"
+                                    android:layout_marginStart="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/tvMobileQualityInInvoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="GOOD"
+                                    android:textSize="8sp"
+                                    android:textColor="@color/grey"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:layout_marginStart="5dp"/>
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="13dp"
+                                    android:background="@color/deep_grey1"
+                                    android:layout_marginStart="5dp"/>
+
+                                <TextView
+                                    android:id="@+id/tvMobileStorageInInvoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4GB / 256GB"
+                                    android:textSize="8sp"
+                                    android:textColor="@color/grey"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:layout_marginStart="5dp"/>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginStart="12dp"
+                                android:layout_marginEnd="12dp">
+                                <TextView
+                                    android:id="@+id/tvMobileOffPriceInInvoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₹ 7900"
+                                    android:textSize="15sp"
+                                    android:textColor="@color/black1"
+                                    android:fontFamily="@font/rubik_bold"/>
+                                <TextView
+                                    android:id="@+id/tvMobileRealPriceInInvoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="₹ 9900"
+                                    android:textColor="@color/grey1"
+                                    android:textSize="15sp"
+                                    android:fontFamily="@font/rubik_bold"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_marginEnd="3dp"/>
+                                <TextView
+                                    android:id="@+id/tvSavePriceOnMobileInInvoice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Save ₹ 2000"
+                                    android:textSize="9sp"
+                                    android:textColor="@color/green"
+                                    android:fontFamily="@font/rubik_regular"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvMobileQtyInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QTY : 1"
+                            android:textSize="12sp"
+                            android:textColor="@color/grey3"
+                            android:fontFamily="@font/rubik_regular"
+                            android:background="@drawable/white_box_grey_border_radious_8"
+                            android:layout_alignParentEnd="true"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"
+                        android:layout_marginTop="15dp"
+                        android:visibility="visible"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rlReturnOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/icReturn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_return"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RETURN PRODUCT"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_toRightOf="@+id/icReturn"
+                            android:textColor="@color/grey"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llOrderStatusInInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llReturnOrder"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/white_box"
+                    android:orientation="vertical"
+                    android:paddingBottom="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Status"
+                        android:textSize="16sp"
+                        android:textColor="@color/black1"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="13dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvOrderStatusInInvoice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"/>
+
+                    <TextView
+                        android:id="@+id/tvSellAllUpdatesInInvoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All Updates"
+                        android:textColor="@color/yellow"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDaysLeftForDeliveryInInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item Deliver with in 2 Days"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/black1"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/llOrderStatusInInvoice"
+                    android:background="@drawable/white_rectangle_box"
+                    android:backgroundTint="@color/yellow2"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="20dp"/>
+
+                <LinearLayout
+                    android:id="@+id/llProductRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDaysLeftForDeliveryInInvoice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/white_box"
+                    android:orientation="vertical"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Rating"
+                        android:textSize="16sp"
+                        android:textColor="@color/black1"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"
+                        android:layout_marginTop="15dp"/>
+
+                    <RatingBar
+                        android:id="@+id/rateBarProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        android:layout_marginTop="10dp"
+                        android:numStars="5"
+                        android:layout_gravity="center"
+                        android:theme="@style/RatingBar"/>
+
+                    <TextView
+                        android:id="@+id/tvWriteReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WRITE REVIEW"
+                        android:textSize="16sp"
+                        android:textColor="@color/grey"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlDownloadInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llProductRating"
+                    android:background="@drawable/white_box_radious_10"
+                    android:backgroundTint="@color/black"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:gravity="center"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp">
+
+                    <ImageView
+                        android:id="@+id/icDownloadInvoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_invoice"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DOWNLOAD INVOICE"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_toRightOf="@+id/icDownloadInvoice"
+                        android:textColor="@color/white"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/rlDownloadInvoice"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/white_box">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price Summary"
+                        android:textSize="16sp"
+                        android:textColor="@color/black1"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="16dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1"
+                        android:layout_marginTop="15dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Items Price"
+                            android:textSize="16sp"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/tvItemPriceInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 44240"
+                            android:textSize="16sp"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textSize="16sp"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/tvDiscountInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- ₹ 10240"
+                            android:textSize="16sp"
+                            android:textColor="@color/green"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery Charges"
+                            android:textSize="16sp"
+                            android:textColor="@color/grey"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/tvDeliveryChargesInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Free"
+                            android:textSize="16sp"
+                            android:textColor="@color/green"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey1" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total Amount"
+                            android:textSize="16sp"
+                            android:textColor="@color/black1"
+                            android:fontFamily="@font/rubik_bold"
+                            android:layout_alignParentStart="true"/>
+
+                        <TextView
+                            android:id="@+id/tvTotalAmountInInvoice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="₹ 34240"
+                            android:textSize="16sp"
+                            android:textColor="@color/black1"
+                            android:fontFamily="@font/rubik_bold"
+                            android:layout_alignParentEnd="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

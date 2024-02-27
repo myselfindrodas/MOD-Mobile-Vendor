@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.UploadDocumentActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/rlLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blackTransparent"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                android:layout_width="wrap_content"
+                android:indeterminateTint="@color/orange"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <include
+            android:id="@+id/topBarUploadDocument"
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/topBarUploadDocument"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color">
+
+                <TextView
+                    android:id="@+id/tvCreateNewAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create New Account"
+                    android:textSize="27sp"
+                    android:textColor="@color/black1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginStart="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvFillDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Fill Your Details"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCreateNewAccount"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:id="@+id/etPanCardNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvFillDetails"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Your Pan Card Number"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:id="@+id/tvUploadPanImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etPanCardNo"
+                    android:text="Upload Pan Image"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_blue"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="20dp"/>
+
+
+                <LinearLayout
+                    android:id="@+id/llPanImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUploadPanImage"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rlFrontImage"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/grey_box"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/image1"
+                            android:scaleType="fitXY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:id="@+id/tvFrontPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Front Side"
+                            android:textColor="@color/black1"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@drawable/icon_feather_upload"
+                            android:drawableTint="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlBackImage"
+                        android:layout_width="105dp"
+                        android:layout_height="105dp"
+                        android:background="@drawable/grey_box"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/image2"
+                            android:scaleType="fitXY"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:id="@+id/tvBackPhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Back Side"
+                            android:textColor="@color/black1"
+                            android:textSize="15sp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:layout_centerInParent="true"
+                            android:drawableTop="@drawable/icon_feather_upload"
+                            android:drawableTint="@color/black"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etGstNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llPanImages"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="GST Number"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlGstImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="105dp"
+                    android:background="@drawable/grey_box"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_weight="1"
+                    app:layout_constraintTop_toBottomOf="@+id/etGstNo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageGst"
+                        android:scaleType="fitXY"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:id="@+id/tvGstPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload GST Certificate"
+                        android:textColor="@color/black1"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:layout_centerInParent="true"
+                        android:drawableTop="@drawable/icon_feather_upload"
+                        android:drawableTint="@color/black"/>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_radious_10"
+                    android:backgroundTint="@color/black"
+                    android:text="SUBMIT"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rlGstImage"
+                    android:layout_margin="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

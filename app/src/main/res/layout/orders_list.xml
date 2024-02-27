@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/white_box"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:layout_marginTop="20dp"
+    android:paddingBottom="15dp">
+
+    <RelativeLayout
+        android:id="@+id/llMobileDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivMobile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/mobile_image"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tvMobileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple I Phone 13 Pro"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/ivMobile"
+            android:layout_toStartOf="@+id/tvOrderStatus"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivMobile"
+            android:layout_below="@+id/tvMobileName"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/mini_grey_box"/>
+                
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="13dp"
+                    android:background="@color/deep_grey1"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOOD"
+                    android:textSize="8sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginStart="5dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="13dp"
+                    android:background="@color/deep_grey1"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvStorage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4GB / 256GB"
+                    android:textSize="8sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvDeliveryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_calendar"
+                android:drawablePadding="5dp"
+                android:text="Delivery by 5th Sept 2023"
+                android:textColor="@color/green"
+                android:textSize="12sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tvOrderStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivered"
+            android:textSize="8sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rubik_regular"
+            android:background="@drawable/green_box_radious_20"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/deep_grey1"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/rlCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_cancel"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL ORDER"
+            android:textSize="12sp"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_toRightOf="@+id/icCancel"
+            android:textColor="@color/red"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rlReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_return"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RETURN PRODUCT"
+            android:textSize="12sp"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_toRightOf="@+id/icReturn"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

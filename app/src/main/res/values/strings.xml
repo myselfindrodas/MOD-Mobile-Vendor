@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Modmobile Vendor</string>
+
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
+    <string name="cancelled">Cancelled</string>
+
+    <string name="create_new_account">Don\'t have and Account? <font color='#E8AB03'><u>Create New Account</u></font></string>
+    <string name="resend"><u>Resend OTP</u></string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCGRQavtVfIlnBuSkELe98R2MFjXQdnLRc</string>
+
+    <string name="strike_text"><strike>₹ 9900</strike> </string>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grey1</item>
+        <item name="colorControlActivated">@color/yellow</item>
+    </style>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#5DB6FA</color>
+    <color name="dot_dark_screen2">#5DB6FA</color>
+    <color name="dot_dark_screen3">#5DB6FA</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#5F01D0</color>
+    <color name="dot_light_screen2">#5F01D0</color>
+    <color name="dot_light_screen3">#5F01D0</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+</resources>

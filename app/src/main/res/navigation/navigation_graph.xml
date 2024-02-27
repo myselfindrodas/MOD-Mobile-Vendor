@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.modmobilesmartsale.ui.fragment.AccountFragment"
+        android:label=""
+        tools:layout="@layout/fragment_account"/>
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.modmobilesmartsale.ui.fragment.AppLandingFragment"
+        android:label=""
+        tools:layout="@layout/fragment_app_landing" />
+
+    <fragment
+        android:id="@+id/nav_cancel_order"
+        android:name="com.example.modmobilesmartsale.ui.fragment.CancelOrderFragment"
+        android:label=""
+        tools:layout="@layout/fragment_cancel_order"/>
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.modmobilesmartsale.ui.fragment.CartFragment"
+        android:label=""
+        tools:layout="@layout/fragment_cart"/>
+
+    <fragment
+        android:id="@+id/nav_favourities"
+        android:name="com.example.modmobilesmartsale.ui.fragment.FavouritesFragment"
+        android:label=""
+        tools:layout="@layout/fragment_favourites"/>
+
+    <fragment
+        android:id="@+id/nav_features"
+        android:name="com.example.modmobilesmartsale.ui.fragment.FeaturesAndSpecificationFragment"
+        android:label=""
+        tools:layout="@layout/fragment_features_and_specification"/>
+
+    <fragment
+        android:id="@+id/nav_filter"
+        android:name="com.example.modmobilesmartsale.ui.fragment.FilterFragment"
+        android:label=""
+        tools:layout="@layout/fragment_filter"/>
+
+    <fragment
+        android:id="@+id/nav_invoice"
+        android:name="com.example.modmobilesmartsale.ui.fragment.InvoiceFragment"
+        android:label=""
+        tools:layout="@layout/fragment_invoice"/>
+
+    <fragment
+        android:id="@+id/nav_order_details"
+        android:name="com.example.modmobilesmartsale.ui.fragment.OrderDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_order_details"/>
+
+    <fragment
+        android:id="@+id/nav_my_order"
+        android:name="com.example.modmobilesmartsale.ui.fragment.OrdersFragment"
+        android:label=""
+        tools:layout="@layout/fragment_orders"/>
+
+    <fragment
+        android:id="@+id/nav_order_status"
+        android:name="com.example.modmobilesmartsale.ui.fragment.OrderStatusFragment"
+        android:label=""
+        tools:layout="@layout/fragment_order_status"/>
+
+    <fragment
+        android:id="@+id/nav_payment_method"
+        android:name="com.example.modmobilesmartsale.ui.fragment.PaymentFragment"
+        android:label=""
+        tools:layout="@layout/fragment_payment"/>
+
+    <fragment
+        android:id="@+id/nav_place_order"
+        android:name="com.example.modmobilesmartsale.ui.fragment.PlaceOrderFragment"
+        android:label=""
+        tools:layout="@layout/fragment_place_order"/>
+
+    <fragment
+        android:id="@+id/nav_product_details"
+        android:name="com.example.modmobilesmartsale.ui.fragment.ProductDetailsFragment"
+        android:label=""
+        tools:layout="@layout/fragment_product_details"/>
+
+    <fragment
+        android:id="@+id/nav_product_list"
+        android:name="com.example.modmobilesmartsale.ui.fragment.ProductListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_product_list"/>
+
+    <fragment
+        android:id="@+id/nav_reviews"
+        android:name="com.example.modmobilesmartsale.ui.fragment.ReviewFragment"
+        android:label=""
+        tools:layout="@layout/fragment_review"/>
+
+    <fragment
+        android:id="@+id/nav_saved_address"
+        android:name="com.example.modmobilesmartsale.ui.fragment.SavedAddressFragment"
+        android:label=""
+        tools:layout="@layout/fragment_saved_address"/>
+
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.modmobilesmartsale.ui.fragment.SearchFragment"
+        android:label=""
+        tools:layout="@layout/fragment_search"/>
+
+    <fragment
+        android:id="@+id/nav_write_review"
+        android:name="com.example.modmobilesmartsale.ui.fragment.WriteReviewFragment"
+        android:label=""
+        tools:layout="@layout/fragment_write_review"/>
+
+
+    <fragment
+        android:id="@+id/nav_addaddress"
+        android:name="com.example.modmobilesmartsale.ui.fragment.AddAddressFragment"
+        android:label=""
+        tools:layout="@layout/fragment_add_address"/>
+
+    <fragment
+        android:id="@+id/nav_couponlist"
+        android:name="com.example.modmobilesmartsale.ui.fragment.CouponList"
+        android:label=""
+        tools:layout="@layout/fragment_coupon_list"/>
+
+
+
+    <fragment
+        android:id="@+id/nav_qclist"
+        android:name="com.example.modmobilesmartsale.ui.fragment.QCDetails"
+        android:label=""
+        tools:layout="@layout/fragment_q_c_details"/>
+
+</navigation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/ivDot"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:background="@drawable/blue_round"
+        android:layout_marginStart="30dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvInfoCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum is simply dummy text of the"
+        android:textColor="@color/black1"
+        android:textSize="13sp"
+        android:fontFamily="@font/rubik_regular"
+        android:layout_marginStart="10dp"/>
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.AddAddressFragment">
+
+        <include
+            android:id="@+id/topBarSearch"
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topBarSearch">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCreateNewAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Address"
+                    android:textSize="27sp"
+                    android:textColor="@color/black1"
+                    android:fontFamily="@font/rubik_bold"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginStart="25dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvFillDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please Fill Your Details"
+                    android:textSize="18sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvCreateNewAccount"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"/>
+
+
+
+                <Spinner
+                    android:id="@+id/zoneSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etEmailId"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/white_box_grey_border"/>
+
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Your City"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/etLocality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Locality"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/etLandmark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Land Mark"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/etContactnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Contact Number"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:maxLength="10"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="number"/>
+
+                <EditText
+                    android:id="@+id/etAlternatenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Alternate No"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:maxLength="10"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="number"/>
+
+
+                <EditText
+                    android:id="@+id/etPincode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:hint="Enter Pincode"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:maxLength="6"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="number"/>
+
+
+
+                <Spinner
+                    android:id="@+id/spAddresstype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_grey_border"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/llName"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="35dp"
+                    android:hint="Address Type"
+                    android:padding="15dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/deep_grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:inputType="text"/>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_box_radious_10"
+                    android:backgroundTint="@color/black"
+                    android:text="Submit"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/rubik_bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/zoneSpinner"
+                    android:layout_margin="25dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"/>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

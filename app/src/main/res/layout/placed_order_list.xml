@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/white_box"
+    android:layout_marginStart="25dp"
+    android:layout_marginEnd="25dp"
+    android:layout_marginTop="20dp"
+    android:paddingBottom="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivMobileImageInPlaceOrder"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/phone_image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/ivMobileImageInPlaceOrder"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMobileNameInPlaceOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple I Phone 13 Pro"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginStart="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/mini_grey_box"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="13dp"
+                    android:background="@color/deep_grey1"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvMobileQualityInPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GOOD"
+                    android:textSize="8sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginStart="5dp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="13dp"
+                    android:background="@color/deep_grey1"
+                    android:layout_marginStart="5dp"/>
+
+                <TextView
+                    android:id="@+id/tvMobileStorageInPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4GB / 256GB"
+                    android:textSize="8sp"
+                    android:textColor="@color/grey"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp">
+                <TextView
+                    android:id="@+id/tvMobileOffPriceInPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 0"
+                    android:textSize="15sp"
+                    android:textColor="@color/black1"
+                    android:fontFamily="@font/rubik_bold"/>
+                <TextView
+                    android:id="@+id/tvMobileRealPriceInPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 0"
+                    android:textColor="@color/grey1"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/rubik_bold"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:foreground="@drawable/strike_through"/>
+                <TextView
+                    android:id="@+id/tvSavePriceOnMobileInPlaceOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save ₹ 0"
+                    android:textSize="9sp"
+                    android:textColor="@color/green"
+                    android:fontFamily="@font/rubik_regular"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMobileQtyInPlaceOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QTY : 1"
+            android:textSize="12sp"
+            android:textColor="@color/grey3"
+            android:fontFamily="@font/rubik_regular"
+            android:background="@drawable/white_box_grey_border_radious_8"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

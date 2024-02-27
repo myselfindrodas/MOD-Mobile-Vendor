@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/mini_white_box"
+    android:layout_margin="5dp"
+    android:id="@+id/clCategoryListItem">
+
+    <ImageView
+        android:id="@+id/imgCategory"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/brand_image"
+        android:layout_gravity="center"
+        android:padding="10dp"/>
+
+    <RadioButton
+        android:id="@+id/checkFilter"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:button="@drawable/custom_check_box"
+        app:buttonTint="@color/yellow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="5dp"/>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        tools:context=".ui.VerifyOTPActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blackTransparent"
+            android:clickable="true"
+            android:elevation="10dp"
+            android:focusable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/pbLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/orange" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llVerifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/white_box"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/rubik_bold"
+                android:text="Enter OTP"
+                android:textColor="@color/black1"
+                android:textSize="27sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text="We sent a OTP to your mobile number"
+                android:textColor="@color/grey"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:id="@+id/linearVerification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:weightSum="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobileNo">
+
+                <EditText
+                    android:id="@+id/otp1"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mini_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAlignment="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/otp2"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mini_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAlignment="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/otp3"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mini_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAlignment="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/otp4"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/mini_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAlignment="center"
+                    android:hint="-"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVerify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/black_btn"
+                android:fontFamily="@font/rubik_bold"
+                android:text="VERIFY"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/icTimer"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/icon_timer" />
+
+                <TextView
+                    android:id="@+id/tvTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/icTimer"
+                    android:fontFamily="@font/rubik_regular"
+                    android:paddingStart="10dp"
+                    android:text="00:00"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvResend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/resend"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

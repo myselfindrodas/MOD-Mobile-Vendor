@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_box"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageOfPhone"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/phone_image" />
+        <TextView
+            android:id="@+id/tvOffOnMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20% Off"
+            android:textSize="11sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rubik_bold"
+            android:background="@drawable/blue_box"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/grey_lower_round_box"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I Phone 6s"
+            android:textColor="@color/black1"
+            android:textSize="11sp"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_marginStart="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+            <TextView
+                android:id="@+id/tvOffPriceOfItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 7900"
+                android:textSize="11sp"
+                android:textColor="@color/black1"
+                android:fontFamily="@font/rubik_bold"/>
+            <TextView
+                android:id="@+id/tvRealPriceOfItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 9900"
+                android:textColor="@color/grey1"
+                android:textSize="11sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:foreground="@drawable/strike_through"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSavePriceOfItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save ₹ 2000"
+            android:textSize="9sp"
+            android:textColor="@color/green"
+            android:fontFamily="@font/rubik_regular"
+            android:layout_marginStart="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

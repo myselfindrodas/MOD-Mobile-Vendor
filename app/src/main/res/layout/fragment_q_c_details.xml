@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.QCDetails">
+
+
+    <include
+        android:id="@+id/topBarProductDetails"
+        layout="@layout/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvQClist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/topBarProductDetails"/>
+
+
+    <TextView
+        android:id="@+id/tvNOqcfound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No QC Found for this device"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="14sp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/icon_dashboard"
+        android:title="DASHBOARD" />
+
+    <item
+        android:id="@+id/nav_my_order"
+        android:icon="@drawable/icon_my_order"
+        android:title="MY ORDERS" />
+
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/icon_category"
+        android:title="CATEGORIES" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/icon_user"
+        android:title="MY ACCOUNT" />
+
+    <item
+        android:id="@+id/nav_favourities"
+        android:icon="@drawable/icon_favourite"
+        android:title="FAVOURITIES" />
+
+    <item
+        android:id="@+id/nav_delivery_partner"
+        android:icon="@drawable/icon_delivery_partner"
+        android:title="DELIVERY PARTNER" />
+
+    <item
+        android:id="@+id/nav_payment_method"
+        android:icon="@drawable/icon_payment"
+        android:title="PAYMENT METHOD" />
+
+    <item
+        android:id="@+id/nav_reviews"
+        android:icon="@drawable/icon_review"
+        android:title="REVIEWS" />
+
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/icon_notification"
+        android:title="NOTIFICATIONS" />
+
+    <group>
+        <item
+            android:id="@+id/nav_logout"
+            android:title="LOGOUT" />
+        <item
+            android:id="@+id/version"
+            android:title="version 1.0" />
+    </group>
+
+</menu>

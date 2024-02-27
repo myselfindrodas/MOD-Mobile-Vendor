@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/white_box_grey_border"
+    android:backgroundTint="@color/white"
+    android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_weight="1"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/tvAddressTypeInSavedAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/addressInSavedAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kolkata, West Bengal, 7000156"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
+    <RadioButton
+        android:id="@+id/checkSavedAddress"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:button="@drawable/custom_checkbox"
+        app:buttonTint="@color/yellow"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

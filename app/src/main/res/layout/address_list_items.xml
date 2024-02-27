@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/llSelectAddress">
+
+    <ImageView
+        android:id="@+id/imageOfAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/left_round_black_box"
+        android:src="@drawable/icon_address_home"
+        android:padding="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@drawable/right_side_round_white_box_grey_border">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvAddressType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_marginStart="15dp"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kolkata, West Bengal, 7000156"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:fontFamily="@font/rubik_regular"
+                android:layout_marginStart="15dp"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_edit"
+            app:tint="@color/yellow"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"/>
+
+        <RadioButton
+            android:id="@+id/checkAddress"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:checked="false"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:button="@drawable/custom_checkbox"
+            app:buttonTint="@color/yellow"
+            android:layout_gravity="center"/>
+
+
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_delete"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/red_connectify"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
