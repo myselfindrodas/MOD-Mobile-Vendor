@@ -95,7 +95,7 @@ class WriteReviewFragment : Fragment() {
 
         Picasso.get()
             .load(data?.image1)
-            .error(R.drawable.phone_image)
+            .error(R.drawable.modmobileph)
             .placeholder(R.drawable.phone_image)
             .into(binding.ivMobileImageInReviewPage)
 
@@ -134,7 +134,7 @@ class WriteReviewFragment : Fragment() {
             viewModel.postreview(
                 PostReviewRequest(
                     name = Shared_Preferences.getName().toString(),
-                    productid = data?.imei1.toString(),
+                    productid = data?.modelCode.toString(),
                     rate = binding.givenrate.rating.toString(),
                     review = binding.etReview.text.toString(),
                     token = Shared_Preferences.getToken().toString(),

@@ -38,7 +38,7 @@ class OrderAdapter(val context: Context, var onItemClickListener: OrderItemClick
         with(holder) {
             Picasso.get()
                 .load(orderItems[position].image1)
-                .error(R.drawable.phone_image)
+                .error(R.drawable.modmobileph)
                 .placeholder(R.drawable.phone_image)
                 .into(ivMobile)
 

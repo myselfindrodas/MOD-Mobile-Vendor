@@ -40,7 +40,7 @@ class FavouritesAdapter(val context: Context, var onItemClickListener: Favourite
 
             Picasso.get()
                 .load(favouriteItems[position].originalImage1)
-                .error(R.drawable.phone_image)
+                .error(R.drawable.modmobileph)
                 .placeholder(R.drawable.phone_image)
                 .into(ivMobileImageInFavourites)
 

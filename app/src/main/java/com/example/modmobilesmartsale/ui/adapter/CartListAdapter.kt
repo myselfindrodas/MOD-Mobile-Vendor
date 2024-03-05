@@ -44,7 +44,7 @@ class CartListAdapter(val context: Context, var onItemClickListener: CartItemCli
 
             Picasso.get()
                 .load(cartItems[position].productImgUrl.toString())
-                .error(R.drawable.phone_image)
+                .error(R.drawable.modmobileph)
                 .placeholder(R.drawable.phone_image)
                 .into(ivMobileImageInCart)
 

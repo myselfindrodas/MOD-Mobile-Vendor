@@ -37,8 +37,8 @@ class SlidingPhonesImageAdapter(val context: Context, var onItemClickListener: O
 
             Picasso.get()
                 .load(images[position])
-                .error(R.drawable.phone_image)
-                .placeholder(R.drawable.slider_image)
+                .error(R.drawable.modmobileph)
+                .placeholder(R.drawable.loader)
                 .into(sliding_phones_image)
 
         }    }

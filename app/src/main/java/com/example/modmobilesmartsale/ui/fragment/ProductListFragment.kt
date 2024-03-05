@@ -9,6 +9,7 @@ import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Toast
@@ -127,6 +128,9 @@ class ProductListFragment : Fragment(), DayDealsAdapter.DayDealsListOnItemClickL
     var orderdetailsItem = ArrayList<OrderDetail>()
     var PHONENAME = ""
     var invoicedetailsItem = ArrayList<InvoiceDetail>()
+
+    var spinnerFilterNameArray = ArrayList<String>()
+    var selectedFilterName = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -375,9 +379,56 @@ class ProductListFragment : Fragment(), DayDealsAdapter.DayDealsListOnItemClickL
             LinearLayoutManager(mainActivity)
         binding.rvLatestEditionsList.adapter = latestEditionAdapter
 
-        getstocklist()
-        DashboardList()
 
+        binding.sortSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View,
+                position: Int,
+                id: Long
+            ) {
+                if (position > 0) {
+                    selectedFilterName = spinnerFilterNameArray[binding.sortSpinner.selectedItemPosition]
+                    Log.d(TAG, "filter---->"+selectedFilterName)
+                    if (selectedFilterName.equals("Recently Added")) {
+
+                        getstocklist("Recently_add", brandid, hotdeals, pricerange, imeibox)
+
+                    } else if (selectedFilterName.equals("Price: High-Low")) {
+                        getstocklist("high_to_low", brandid, hotdeals, pricerange, imeibox)
+
+                    } else if (selectedFilterName.equals("Price: Low-High")) {
+
+                        getstocklist("low_to_hight", brandid, hotdeals, pricerange, imeibox)
+
+                    }
+
+                }
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+
+            }
+        }
+
+        getstocklist("", brandid, hotdeals, pricerange, imeibox)
+        DashboardList()
+        spfilter()
+
+
+    }
+
+
+    private fun spfilter() {
+        spinnerFilterNameArray.add("Please Select")
+        spinnerFilterNameArray.add("Recently Added")
+        spinnerFilterNameArray.add("Price: High-Low")
+        spinnerFilterNameArray.add("Price: Low-High")
+        val arrayAdapter: ArrayAdapter<String> = ArrayAdapter<String>(mainActivity, android.R.layout.simple_spinner_item, spinnerFilterNameArray)
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.sortSpinner.adapter = arrayAdapter
     }
 
     private fun DashboardList() {
@@ -488,7 +539,7 @@ class ProductListFragment : Fragment(), DayDealsAdapter.DayDealsListOnItemClickL
     }
 
 
-    private fun getstocklist() {
+    private fun getstocklist(search:String, brandid:String, hotdeals:String, pricerange:String, imeibox:String) {
 
         var userType=""
         if (Shared_Preferences.getUserType().equals("Retailer")){
@@ -506,7 +557,7 @@ class ProductListFragment : Fragment(), DayDealsAdapter.DayDealsListOnItemClickL
                         ascCode = "MMWHDL002",
                         brandId = brandid,
                         hotDeal = hotdeals,
-                        search = "",
+                        search = search,
                         imei = "",
                         modelCode = "",
                         color = "",

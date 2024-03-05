@@ -46,7 +46,7 @@ class BrandPhoneAdapter(
 
                 Picasso.get()
                     .load(dayDealsList[position].originalImage1)
-                    .error(R.drawable.phone_image)
+                    .error(R.drawable.modmobileph)
                     .placeholder(R.drawable.phone_image)
                     .into(imgPhone)
 

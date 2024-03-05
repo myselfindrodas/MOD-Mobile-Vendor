@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.fragment.ProfileDetails">
+
+        <include
+            android:id="@+id/topBarAccount"
+            layout="@layout/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+
+        <LinearLayout
+            android:id="@+id/llProfile"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/topBarAccount"
+            android:background="@color/blue"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="85dp"
+                android:layout_width="85dp"
+                android:layout_height="85dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <androidx.cardview.widget.CardView
+                        app:cardCornerRadius="55dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp">
+
+                        <ImageView
+                            android:id="@+id/ivUserInProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/user" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llProfile"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_box_grey_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llName"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="35dp"
+                android:hint="Full Name"
+                android:padding="15dp"
+                android:textSize="13sp"
+                android:textColor="@color/deep_grey"
+                android:fontFamily="@font/rubik_regular"
+                android:inputType="text"/>
+
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_box_grey_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llName"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="35dp"
+                android:hint="Phone Number"
+                android:padding="15dp"
+                android:textSize="13sp"
+                android:textColor="@color/deep_grey"
+                android:fontFamily="@font/rubik_regular"
+                android:inputType="number"/>
+
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_box_grey_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llName"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="35dp"
+                android:hint="Address"
+                android:padding="15dp"
+                android:textSize="13sp"
+                android:textColor="@color/deep_grey"
+                android:fontFamily="@font/rubik_regular"
+                android:inputType="text"/>
+
+
+            <EditText
+                android:id="@+id/etState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_box_grey_border"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llName"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="35dp"
+                android:hint="State"
+                android:padding="15dp"
+                android:textSize="13sp"
+                android:textColor="@color/deep_grey"
+                android:fontFamily="@font/rubik_regular"
+                android:inputType="text"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/white_box_radious_10"
+                android:backgroundTint="@color/black"
+                android:text="Update"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/rubik_bold"
+                android:layout_margin="25dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

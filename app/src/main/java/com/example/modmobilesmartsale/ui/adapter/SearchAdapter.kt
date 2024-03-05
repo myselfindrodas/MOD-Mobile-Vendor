@@ -49,7 +49,7 @@ class SearchAdapter(val context: Context, var onItemClickListener: SearchItemCli
 
             Picasso.get()
                 .load(searchList[position].originalImage1)
-                .error(R.drawable.phone_image)
+                .error(R.drawable.modmobileph)
                 .placeholder(R.drawable.phone_image)
                 .into(imgPhone)
 

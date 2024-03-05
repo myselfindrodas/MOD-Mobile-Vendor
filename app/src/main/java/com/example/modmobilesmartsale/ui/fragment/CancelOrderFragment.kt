@@ -88,7 +88,7 @@ class CancelOrderFragment : Fragment() {
 
         Picasso.get()
             .load(data?.image1)
-            .error(R.drawable.phone_image)
+            .error(R.drawable.modmobileph)
             .placeholder(R.drawable.phone_image)
             .into(binding.ivCancelMobileImage)
 

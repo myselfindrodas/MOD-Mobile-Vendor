@@ -44,7 +44,7 @@ class RelatedProductListAdapter(val context: Context, var onItemClickListener: R
             } else {
                 Picasso.get()
                     .load(relatedProductList[position].originalImage1)
-                    .error(R.drawable.phone_image)
+                    .error(R.drawable.modmobileph)
                     .placeholder(R.drawable.phone_image)
                     .into(imageOfPhone)
             }

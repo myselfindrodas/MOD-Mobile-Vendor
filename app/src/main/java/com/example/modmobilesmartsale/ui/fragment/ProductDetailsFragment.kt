@@ -199,7 +199,8 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
         stocktype = data?.stockType.toString()
 
         binding.topBarProductDetails.ivBack.setOnClickListener {
-            mainActivity.onBackPressedDispatcher.onBackPressed()
+            val navController = Navigation.findNavController(it)
+            navController.navigate(R.id.nav_home)
         }
 
         mainActivity.setBottomNavigationVisibility(false)
@@ -484,7 +485,7 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
 
             viewModel.getreview(
                 ReviewlistRequest(
-                    productid = data?.imei1.toString(),
+                    productid = data?.modelCode.toString(),
                     token = Shared_Preferences.getToken().toString(),
                     userid = Shared_Preferences.getUserId()
                 )
@@ -573,7 +574,7 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
 
             viewModel.getcolorstorage(
                 StorageColorRequest(
-                    modelName = data?.model.toString(),
+                    modelName = data?.modelCode.toString(),
                     token = Shared_Preferences.getToken().toString()
                 )
             )
