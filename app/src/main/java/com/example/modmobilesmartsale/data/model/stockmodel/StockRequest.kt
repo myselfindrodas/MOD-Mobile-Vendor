@@ -10,7 +10,7 @@ data class StockRequest(
     val brandId: String,
     @SerializedName("color")
     val color: String,
-    @SerializedName("hot_deal")
+    @SerializedName("hot_deals")
     val hotDeal: String,
     @SerializedName("search")
     val search: String,

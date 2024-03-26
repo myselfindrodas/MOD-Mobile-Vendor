@@ -13,6 +13,8 @@ data class Data(
     val boxOriginal: String,
     @SerializedName("brand")
     val brand: String,
+    @SerializedName("brand_id")
+    val brandid: String,
     @SerializedName("brand_warranty")
     val brandWarranty: String,
     @SerializedName("brand_warranty_till_date")

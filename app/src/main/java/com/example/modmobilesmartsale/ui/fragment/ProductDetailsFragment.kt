@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.ContentValues.TAG
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -341,7 +340,7 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
 
         storagecolor()
         getproductimage()
-        getrelatedproductlist(data?.model.toString())
+        getrelatedproductlist(data?.brandid.toString())
         productfeedback()
     }
 
@@ -1639,7 +1638,7 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
 
     }
 
-    private fun getrelatedproductlist(modelname: String) {
+    private fun getrelatedproductlist(brandid: String) {
 
         var userType=""
         if (Shared_Preferences.getUserType().equals("Retailer")){
@@ -1653,14 +1652,14 @@ class ProductDetailsFragment : Fragment(), SlidingPhonesImageAdapter.OnItemClick
             viewModel.getstock(
                 StockRequest(
                     ascCode = "MMWHDL002",
-                    brandId = "",
+                    brandId = brandid,
                     hotDeal = "",
                     search = "",
                     imei = "",
                     modelCode = "",
                     color = "",
                     memory = "",
-                    modelName = modelname,
+                    modelName = "",
                     phoneVersion = "",
                     price = "",
                     stockType = "",
